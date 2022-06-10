@@ -4,7 +4,7 @@
 #include <vector>
 
 class Tree {
- public:
+public:
     explicit Tree(std::vector<char> setSmbls) {
         root = new Node;
         root->value = '*';
@@ -20,7 +20,8 @@ class Tree {
             return prmtns[n - 1];
         }
     }
- private:
+ 
+private:
     struct Node {
         char value;
         std::vector<Node*> childList = {};
@@ -53,5 +54,5 @@ class Tree {
                 Perms(_root->childList[i], perm);
         }
     }
- };
+};
 #endif  // INCLUDE_TREE_H_
