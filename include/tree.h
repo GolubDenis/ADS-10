@@ -20,6 +20,7 @@ class Tree {
             return prmtns[n - 1];
         }
     }
+ 
  private:
     struct Node {
         char value;
