@@ -37,6 +37,7 @@ class Tree {
                 Perms(_root->childList[i], perm);
         }
     }
+
  public:
     explicit Tree(std::vector<char> setSmbls) {
         root = new Node;
