@@ -4,23 +4,6 @@
 #include <vector>
 
 class Tree {
- public:
-    explicit Tree(std::vector<char> setSmbls) {
-        root = new Node;
-        root->value = '*';
-        MakeTree(root, setSmbls);
-    }
-
-    std::vector<char> getPerm(int n) {
-        Perms(root);
-        if (n > prmtns.size()) {
-            std::vector<char> null = {};
-            return null;
-        } else {
-            return prmtns[n - 1];
-        }
-    }
- 
  private:
     struct Node {
         char value;
@@ -52,6 +35,22 @@ class Tree {
         } else {
             for (int i = 0; i < _root->childList.size(); i++)
                 Perms(_root->childList[i], perm);
+        }
+    }
+ public:
+    explicit Tree(std::vector<char> setSmbls) {
+        root = new Node;
+        root->value = '*';
+        MakeTree(root, setSmbls);
+    }
+
+    std::vector<char> getPerm(int n) {
+        Perms(root);
+        if (n > prmtns.size()) {
+            std::vector<char> null = {};
+            return null;
+        } else {
+            return prmtns[n - 1];
         }
     }
 };
