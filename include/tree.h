@@ -4,7 +4,7 @@
 #include <vector>
 
 class Tree {
-public:
+ public:
     explicit Tree(std::vector<char> setSmbls) {
         root = new Node;
         root->value = '*';
@@ -21,7 +21,7 @@ public:
         }
     }
  
-private:
+ private:
     struct Node {
         char value;
         std::vector<Node*> childList = {};
